@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learning/screens/book_screen.dart';
 import 'package:learning/screens/dialog_screen.dart';
+import 'package:learning/screens/google_books_screen.dart';
+import 'package:learning/screens/learning_stream.dart';
 import 'package:learning/screens/location_screen.dart';
 import 'package:learning/signup_screen.dart';
 import 'package:learning/stateful_basics.dart';
@@ -20,7 +22,9 @@ class AppRoutes {
           name: '/',
           builder: (context, state) {
             // return StopWatch();
-            return BookDataScreen();
+            //return BookDataScreen();
+            //return GoogleBooksScreen();
+            return StreamLearning();
           },
         ),
         GoRoute(

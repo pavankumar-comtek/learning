@@ -1,8 +1,10 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 import 'package:learning/models/pizza_model.dart';
+import 'package:learning/models/volume_response.dart';
 
 class BookApi {
   //GET, POST, PUT, DELETE
@@ -19,11 +21,11 @@ class BookApi {
   //DELETE means to remove data from the server
   // Deleting a file from the server
 
-  Future<Response> getBooks() async {
+  Future<VolumeResponse> getBooks() async {
     Response response = await get(Uri.parse(
         'https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699'));
-    print(response.body);
-    return response;
+    log(response.body);
+    return VolumeResponse.fromJson(jsonDecode(response.body));
   }
 
   //Write function to read json file from assets
