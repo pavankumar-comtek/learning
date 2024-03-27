@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -12,6 +13,47 @@ class StreamLearning extends StatefulWidget {
 
 class _StreamLearningState extends State<StreamLearning> {
   final counterStream = CounterStream();
+
+  StreamTransformer<int, int> streamTransformer =
+      StreamTransformer<int, int>.fromHandlers(
+    handleData: (data, sink) {
+      sink.add(data * 2);
+    },
+    handleError: (error, stackTrace, sink) {
+      sink.addError("Error: $error");
+    },
+    handleDone: (sink) {
+      sink.close();
+    },
+  );
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    counterStream.streamController.stream.listen((event) {
+      log("Printed from StreamController");
+    });
+
+    counterStream.streamController.stream.listen((event) {
+      log("Printed from StreamController 2");
+    });
+
+    counterStream.streamController.stream
+        .transform(streamTransformer)
+        .listen((event) {
+      log("Printed from StreamTransformer $event");
+      log("Count is ${counterStream.count}");
+    });
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    counterStream.close();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     //If it is calling from setState
@@ -25,7 +67,8 @@ class _StreamLearningState extends State<StreamLearning> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             StreamBuilder<int>(
-              stream: counterStream.streamController.stream,
+              stream: counterStream.streamController.stream
+                  .transform(streamTransformer),
               builder: (context, snapshot) {
                 return Text('You hit me: ${snapshot.data} times');
               },
