@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:learning/favourite_page.dart';
+import 'package:learning/screens/favourite_page.dart';
 
 class StopWatch extends StatefulWidget {
   const StopWatch({super.key});
@@ -29,6 +29,7 @@ class _StopWatchState extends State<StopWatch> {
     timer = Timer.periodic(Duration(seconds: 1), (timer) {
       print(timer.tick);
       setState(() {
+        //It will refresh the entire screen.
         count++;
       });
     });
@@ -53,6 +54,12 @@ class _StopWatchState extends State<StopWatch> {
   //dispose()
   //It is called when the state object is removed from the tree.
 
+
+
+// Provider
+// Bloc
+// GetX
+// RiverPod
   @override
   void dispose() {
     // TODO: implement dispose

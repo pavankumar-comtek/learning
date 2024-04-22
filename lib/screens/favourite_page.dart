@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:learning/favourites_model.dart';
+import 'package:learning/models/favourites_model.dart';
 
 class FavouriteModules extends StatefulWidget {
   FavouriteModules({super.key});

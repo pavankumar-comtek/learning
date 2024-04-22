@@ -5,8 +5,9 @@ import 'package:learning/screens/dialog_screen.dart';
 import 'package:learning/screens/google_books_screen.dart';
 import 'package:learning/screens/learning_stream.dart';
 import 'package:learning/screens/location_screen.dart';
-import 'package:learning/signup_screen.dart';
-import 'package:learning/stateful_basics.dart';
+import 'package:learning/screens/provider_screen.dart';
+import 'package:learning/screens/signup_screen.dart';
+import 'package:learning/screens/stateful_basics.dart';
 
 class AppRoutes {
   //GoRouter
@@ -23,8 +24,9 @@ class AppRoutes {
           builder: (context, state) {
             // return StopWatch();
             //return BookDataScreen();
-            //return GoogleBooksScreen();
-            return StreamLearning();
+            // return GoogleBooksScreen();
+            return ExampleProviderScreen();
+            //return StreamLearning();
           },
         ),
         GoRoute(

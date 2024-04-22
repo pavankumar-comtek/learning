@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning/routes/app_routes.dart';
-import 'package:learning/signup_screen.dart';
-import 'package:learning/stopwatch.dart';
+import 'package:learning/screens/signup_screen.dart';
+import 'package:learning/screens/stopwatch.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
       ),
       //it will have access to all routes in the app.
       routerConfig: AppRoutes.routes,
+      
     );
   }
 }
