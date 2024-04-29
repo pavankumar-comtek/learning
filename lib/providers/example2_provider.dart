@@ -11,13 +11,13 @@ import 'package:learning/repository/api.dart';
 ///Consumer
 ///It is a widget that listens to the changes in the ChangeNotifier class and rebuilds the widget tree when the data changes.
 
-class ExampleProvider extends BaseProvider {
-  ExampleProvider() {
+class ExampleProvider2 extends BaseProvider {
+  ExampleProvider2() {
     getBookList();
   }
   int counter = 0;
   VolumeResponse? volumeResponse;
-
+ 
   void incrementCounter() {
     counter++;
     //Similar to setState() in Stateful widget but it only updated the widget which is listening.
