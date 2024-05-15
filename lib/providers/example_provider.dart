@@ -12,9 +12,10 @@ import 'package:learning/repository/api.dart';
 ///It is a widget that listens to the changes in the ChangeNotifier class and rebuilds the widget tree when the data changes.
 
 class ExampleProvider extends BaseProvider {
-  ExampleProvider() {
-    getBookList();
-  }
+  // ExampleProvider() {
+  //   //This is the constructor of the class which is called when the class is initialized.
+  //   //getBookList();
+ // }
   int counter = 0;
   VolumeResponse? volumeResponse;
 

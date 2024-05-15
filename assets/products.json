@@ -1,0 +1,30 @@
+[ 
+    { 
+      "productName": "T-Shirt", 
+      "productPrice": 10.34, 
+      "productImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.decathlon.in%2Fp%2F8388642%2Fgym-wear-for-men%2Fmen-s-cotton-gym-t-shirt-regular-fit-sportee-100-black%3Fid%3D8388642%26type%3Dp&psig=AOvVaw0NqsYqqv6T8Fu_kXnCoKDG&ust=1715870843537000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLCG9ZLzj4YDFQAAAAAdAAAAABAE",
+      "productColor": "Red", 
+      "productSize": "M" ,
+      "productQuantity": 1,
+      "productCurrency": "$"
+    },
+    { 
+        "productName": "Shirt", 
+        "productPrice": 30.53, 
+        "productImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.decathlon.in%2Fp%2F8388642%2Fgym-wear-for-men%2Fmen-s-cotton-gym-t-shirt-regular-fit-sportee-100-black%3Fid%3D8388642%26type%3Dp&psig=AOvVaw0NqsYqqv6T8Fu_kXnCoKDG&ust=1715870843537000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLCG9ZLzj4YDFQAAAAAdAAAAABAE",
+        "productColor": "Red", 
+        "productSize": "M" ,
+        "productQuantity": 1,
+        "productCurrency": "$"
+      },
+      { 
+        "productName": "Jeans", 
+        "productPrice": 70.60, 
+        "productImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.decathlon.in%2Fp%2F8388642%2Fgym-wear-for-men%2Fmen-s-cotton-gym-t-shirt-regular-fit-sportee-100-black%3Fid%3D8388642%26type%3Dp&psig=AOvVaw0NqsYqqv6T8Fu_kXnCoKDG&ust=1715870843537000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLCG9ZLzj4YDFQAAAAAdAAAAABAE",
+        "productColor": "Red", 
+        "productSize": "M" ,
+        "productQuantity": 1,
+        "productCurrency": "$"
+      }
+    
+   ]

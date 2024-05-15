@@ -4,6 +4,7 @@ import 'dart:developer';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 import 'package:learning/models/pizza_model.dart';
+import 'package:learning/models/product_model.dart';
 import 'package:learning/models/volume_response.dart';
 
 class BookApi {
@@ -34,6 +35,16 @@ class BookApi {
       String jsonString = await rootBundle.loadString('assets/pizzalist.json');
       print(jsonString);
       return pizzaModelFromJson(jsonString);
+    } catch (e) {
+      return [];
+    }
+  }
+
+  Future<List<ProductDetails>> loadProducts() async {
+    try {
+      String jsonString = await rootBundle.loadString('assets/products.json');
+      print(jsonString);
+      return productDetailsFromJson(jsonString);
     } catch (e) {
       return [];
     }

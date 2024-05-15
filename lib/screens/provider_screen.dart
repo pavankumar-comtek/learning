@@ -12,6 +12,18 @@ class ExampleProviderScreen extends StatefulWidget {
 }
 
 class _ExampleProviderScreenState extends State<ExampleProviderScreen> {
+  
+  
+  
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Provider.of<ExampleProvider>(context, listen: false).getBookList();
+  }
+  
+  
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,12 +32,7 @@ class _ExampleProviderScreenState extends State<ExampleProviderScreen> {
       ),
 
       //ChangeNotifierProvider is parent widget that provides access to the data and logic of the ChangeNotifier class.
-      body: MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (context) => ExampleProvider()),
-          ChangeNotifierProvider(create: (context) => ExampleProvider2()),
-        ],
-        child: Center(
+      body:  Center(
           child: Consumer<ExampleProvider>(builder: (context, provider, child) {
             return SingleChildScrollView(
               child: provider.volumeResponse == null
@@ -46,7 +53,7 @@ class _ExampleProviderScreenState extends State<ExampleProviderScreen> {
             );
           }),
         ),
-      ),
+      
     );
   }
 }
